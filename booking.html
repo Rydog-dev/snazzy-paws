@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a dog grooming appointment online at Snazzy Paws Grooming in Hamilton.">
+    <title>Book an Appointment | Snazzy Paws Grooming</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ====== HEADER ====== -->
+    <header>
+      <div class="container header-inner">
+
+        <a href="index.html" class="logo" aria-label="Snazzy Paws Grooming — go to home page">
+          Snazzy Paws Grooming
+        </a>
+
+        <input type="checkbox" id="nav-check" class="nav-check" aria-hidden="true">
+        <label for="nav-check" class="nav-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html" aria-current="page">Book Now</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <!-- ====== MAIN ====== -->
+    <main id="main-content">
+
+      <!-- Page Banner -->
+      <section class="page-banner" aria-labelledby="page-title">
+        <div class="container">
+          <h1 id="page-title">Book an Appointment</h1>
+          <p>Fill in the form below and we will confirm your booking by phone or email.</p>
+        </div>
+      </section>
+
+      <!-- Booking Form -->
+      <section class="form-section" aria-labelledby="booking-heading">
+        <div class="container">
+          <div class="form-layout">
+
+            <!-- Left: intro info -->
+            <div class="form-intro">
+              <h2 id="booking-heading">Reserve Your Spot</h2>
+              <p>
+                We love meeting new furry clients! Submit your booking request
+                and a member of our team will confirm your appointment within
+                one business day.
+              </p>
+              <p>Before you book, please note:</p>
+              <ul>
+                <li>Appointments are available Monday to Saturday, 9 am &ndash; 5 pm.</li>
+                <li>Please arrive 5 minutes before your scheduled time.</li>
+                <li>Dogs must be up to date on vaccinations.</li>
+                <li>Cancellations require 24 hours&rsquo; notice.</li>
+                <li>Prices vary by breed, size and coat condition.</li>
+              </ul>
+              <p style="margin-top: 1.5rem;">
+                Prefer to talk? Call us during opening hours and we will book
+                you in right away.
+              </p>
+            </div>
+
+            <!-- Right: form card -->
+            <div class="card-form">
+              <form
+                action="#"
+                method="post"
+                novalidate
+                aria-label="Booking request form"
+              >
+                <p class="required-note">
+                  Fields marked <span aria-hidden="true">*</span>
+                  <span class="visually-hidden">with an asterisk</span> are required.
+                </p>
+
+                <!-- Owner details -->
+                <fieldset style="border:none; padding:0; margin-bottom:1.5rem;">
+                  <legend style="font-weight:700; color:var(--clr-dark); font-size:1rem; margin-bottom:1rem;">
+                    Owner Details
+                  </legend>
+
+                  <div class="form-group">
+                    <label for="owner-name">Owner&rsquo;s Full Name <span aria-hidden="true">*</span></label>
+                    <input
+                      type="text"
+                      id="owner-name"
+                      name="owner_name"
+                      autocomplete="name"
+                      required
+                      aria-required="true"
+                      placeholder="e.g. Jane Smith"
+                    >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="owner-email">Email Address <span aria-hidden="true">*</span></label>
+                    <input
+                      type="email"
+                      id="owner-email"
+                      name="owner_email"
+                      autocomplete="email"
+                      required
+                      aria-required="true"
+                      placeholder="e.g. jane@example.com"
+                    >
+                  </div>
+
+                </fieldset>
+
+                <!-- Dog details -->
+                <fieldset style="border:none; padding:0; margin-bottom:1.5rem;">
+                  <legend style="font-weight:700; color:var(--clr-dark); font-size:1rem; margin-bottom:1rem;">
+                    Dog Details
+                  </legend>
+
+                  <div class="form-group">
+                    <label for="dog-name">Dog&rsquo;s Name <span aria-hidden="true">*</span></label>
+                    <input
+                      type="text"
+                      id="dog-name"
+                      name="dog_name"
+                      required
+                      aria-required="true"
+                      placeholder="e.g. Buddy"
+                    >
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="dog-breed">Breed <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="dog-breed"
+                        name="dog_breed"
+                        required
+                        aria-required="true"
+                        placeholder="e.g. Labrador"
+                      >
+                    </div>
+
+                    <div class="form-group">
+                      <label for="dog-age">Age <span aria-hidden="true">*</span></label>
+                      <input
+                        type="text"
+                        id="dog-age"
+                        name="dog_age"
+                        required
+                        aria-required="true"
+                        placeholder="e.g. 3 years"
+                      >
+                    </div>
+                  </div>
+
+                </fieldset>
+
+                <!-- Appointment details -->
+                <fieldset style="border:none; padding:0; margin-bottom:1.5rem;">
+                  <legend style="font-weight:700; color:var(--clr-dark); font-size:1rem; margin-bottom:1rem;">
+                    Appointment
+                  </legend>
+
+                  <div class="form-group">
+                    <label for="service">Preferred Service</label>
+                    <select id="service" name="service">
+                      <option value="">-- Select a service --</option>
+                      <option value="bath-brush">Bath &amp; Brush ($25 &ndash; $50)</option>
+                      <option value="haircut">Haircut ($45 &ndash; $85)</option>
+                      <option value="nail-trim">Nail Trim ($10 &ndash; $20)</option>
+                      <option value="ear-cleaning">Ear Cleaning ($10 &ndash; $15)</option>
+                      <option value="teeth-brushing">Teeth Brushing ($10 &ndash; $15)</option>
+                      <option value="spa-package">Spa Package ($75 &ndash; $150)</option>
+                      <option value="puppy-package">Puppy Package ($30 &ndash; $60)</option>
+                      <option value="senior-package">Senior Dog Package ($40 &ndash; $80)</option>
+                      <option value="full-grooming">Full Grooming Package ($60 &ndash; $120)</option>
+                      <option value="other">Other / Not Sure</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="preferred-date">Preferred Date</label>
+                    <input
+                      type="date"
+                      id="preferred-date"
+                      name="preferred_date"
+                    >
+                  </div>
+
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary form-submit">
+                  Submit Booking Request
+                </button>
+
+              </form>
+            </div><!-- /.card-form -->
+
+          </div><!-- /.form-layout -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+      <div class="container footer-inner">
+
+        <div class="footer-brand">
+          <strong>Snazzy Paws Grooming</strong>
+          <p>Hamilton's premier professional dog grooming salon.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-hours-col">
+          <h3>Opening Hours</h3>
+          <table class="hours-table" aria-label="Salon opening hours">
+            <tbody>
+              <tr>
+                <td>Monday &ndash; Friday</td>
+                <td>9:00 am &ndash; 5:00 pm</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>9:00 am &ndash; 5:00 pm</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>Closed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Snazzy Paws Grooming. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

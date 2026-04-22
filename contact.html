@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Snazzy Paws Grooming in Hamilton. Find our location, opening hours, and send us a message.">
+    <title>Contact Us | Snazzy Paws Grooming</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ====== HEADER ====== -->
+    <header>
+      <div class="container header-inner">
+
+        <a href="index.html" class="logo" aria-label="Snazzy Paws Grooming — go to home page">
+          Snazzy Paws Grooming
+        </a>
+
+        <input type="checkbox" id="nav-check" class="nav-check" aria-hidden="true">
+        <label for="nav-check" class="nav-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <!-- ====== MAIN ====== -->
+    <main id="main-content">
+
+      <!-- Page Banner -->
+      <section class="page-banner" aria-labelledby="page-title">
+        <div class="container">
+          <h1 id="page-title">Contact Us</h1>
+          <p>We would love to hear from you. Find us in Hamilton or send a message below.</p>
+        </div>
+      </section>
+
+      <!-- Map Section -->
+      <section class="map-section" aria-labelledby="location-heading">
+        <div class="container">
+          <div class="map-inner">
+
+            <div class="map-details">
+              <h2 id="location-heading">Find Us</h2>
+
+              <address>
+                <strong>Snazzy Paws Grooming</strong>
+                123 River Road<br>
+                Hamilton 3204<br>
+                New Zealand
+              </address>
+
+              <p>
+                <strong>Phone</strong>
+                (07) 123 4567
+              </p>
+
+              <p>
+                <strong>Email</strong>
+                hello@snazzypaws.co.nz
+              </p>
+
+              <p>
+                <strong>Opening Hours</strong>
+                Monday &ndash; Saturday: 9:00 am &ndash; 5:00 pm<br>
+                Sunday: Closed
+              </p>
+            </div>
+
+            <div class="map-embed">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.6!2d175.2791388!3d-37.7869966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6d18c823d97769%3A0x500ef8684799420!2sHamilton%2C%20New%20Zealand!5e0!3m2!1sen!2snz!4v1700000000000"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Map showing Snazzy Paws Grooming location in Hamilton, New Zealand"
+              ></iframe>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section class="form-section" aria-labelledby="contact-heading">
+        <div class="container">
+          <div class="form-layout">
+
+            <!-- Left: intro -->
+            <div class="form-intro">
+              <h2 id="contact-heading">Send Us a Message</h2>
+              <p>
+                Have a question about our services, pricing, or availability?
+                Fill in the form and we will get back to you within one business day.
+              </p>
+              <p>
+                For urgent enquiries, please call us directly during opening hours.
+              </p>
+              <ul>
+                <li>General grooming enquiries</li>
+                <li>Pricing and package information</li>
+                <li>Special requirements or breed-specific questions</li>
+                <li>Feedback and suggestions</li>
+              </ul>
+            </div>
+
+            <!-- Right: form card -->
+            <div class="card-form">
+              <form
+                action="#"
+                method="post"
+                novalidate
+                aria-label="Contact form"
+              >
+                <p class="required-note">
+                  Fields marked <span aria-hidden="true">*</span>
+                  <span class="visually-hidden">with an asterisk</span> are required.
+                </p>
+
+                <div class="form-group">
+                  <label for="contact-name">Full Name <span aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    autocomplete="name"
+                    required
+                    aria-required="true"
+                    placeholder="e.g. Jane Smith"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email">Email Address <span aria-hidden="true">*</span></label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                    placeholder="e.g. jane@example.com"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-phone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="contact-phone"
+                    name="phone"
+                    autocomplete="tel"
+                    placeholder="e.g. 021 123 4567"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-comment">Comment <span aria-hidden="true">*</span></label>
+                  <textarea
+                    id="contact-comment"
+                    name="comment"
+                    required
+                    aria-required="true"
+                    placeholder="How can we help you?"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary form-submit">
+                  Send Message
+                </button>
+
+              </form>
+            </div><!-- /.card-form -->
+
+          </div><!-- /.form-layout -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+      <div class="container footer-inner">
+
+        <div class="footer-brand">
+          <strong>Snazzy Paws Grooming</strong>
+          <p>Hamilton's premier professional dog grooming salon.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-hours-col">
+          <h3>Opening Hours</h3>
+          <table class="hours-table" aria-label="Salon opening hours">
+            <tbody>
+              <tr>
+                <td>Monday &ndash; Friday</td>
+                <td>9:00 am &ndash; 5:00 pm</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>9:00 am &ndash; 5:00 pm</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>Closed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Snazzy Paws Grooming. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

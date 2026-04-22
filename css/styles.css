@@ -229,7 +229,6 @@ header {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   min-height: var(--nav-height);
   flex-wrap: wrap;
   gap: var(--sp-2);
@@ -271,6 +270,8 @@ header {
   cursor: pointer;
   padding: var(--sp-2);
   border-radius: var(--radius);
+  order: 2;
+  flex-shrink: 0;
 }
 
 .nav-toggle span {
@@ -294,6 +295,26 @@ header {
 
 .nav-check:checked ~ .nav-toggle span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Nav takes remaining space; logo on left, links on right */
+nav[aria-label="Primary navigation"] {
+  flex: 1;
+  order: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Override nav a padding for the logo link */
+nav[aria-label="Primary navigation"] .logo {
+  padding: var(--sp-3) 0;
+}
+
+nav[aria-label="Primary navigation"] .logo:hover,
+nav[aria-label="Primary navigation"] .logo:focus {
+  background-color: transparent;
+  color: var(--clr-primary-light);
 }
 
 /* Navigation list */
@@ -325,24 +346,32 @@ nav[aria-label="Primary navigation"] a[aria-current="page"] {
   }
 
   nav[aria-label="Primary navigation"] {
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  .nav-check:checked ~ nav[aria-label="Primary navigation"] {
-    max-height: 20rem;
+    flex-wrap: wrap;
   }
 
   nav[aria-label="Primary navigation"] ul {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
     flex-direction: column;
+    transition: max-height 0.3s ease;
+    padding-bottom: 0;
+  }
+
+  .nav-check:checked ~ nav[aria-label="Primary navigation"] ul {
+    max-height: 20rem;
     padding-bottom: var(--sp-4);
   }
 
   nav[aria-label="Primary navigation"] a {
     padding: var(--sp-3) var(--sp-4);
     border-radius: var(--radius);
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
   }
 }
 
